@@ -1,0 +1,23 @@
+{
+  "name": "mwa-homework-4-nodejs-03-tuvshintur",
+  "version": "1.0.0",
+  "description": "Create a **Reactive HTTP server** that receives a number passed in the request as query parameter as following: `http://localhost:4000/?n=10` and returns a `JSON` object contains the Fibonacci number of `n`.  \r **Example**: `?n=10` should return a `JSON` object: `{fib: 55}`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maharishi-university/mwa-homework-4-nodejs-03-Tuvshintur.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maharishi-university/mwa-homework-4-nodejs-03-Tuvshintur/issues"
+  },
+  "homepage": "https://github.com/maharishi-university/mwa-homework-4-nodejs-03-Tuvshintur#readme",
+  "dependencies": {
+    "rxjs": "^6.5.4"
+  }
+}

@@ -1,0 +1,28 @@
+[
+    {
+        "name": "library name",
+        "books": [
+            {
+                "_id": "Object_id('asd')",
+                "bookId": "bookid",
+                "w": "author",
+                "isbn": "isbn",
+                "keywords": "keyword",
+                "stock": 123
+            }
+        ]
+    },
+    {
+        "_id": "Object_id('asd')",
+        "studentId": "studentid",
+        "studentName": "studentName",
+        "email": "email",
+        "phone": "phone",
+        "borrowedBooks": [
+            {
+                "book":{},
+                "returnDate": "date"
+            }
+        ]
+    }
+]

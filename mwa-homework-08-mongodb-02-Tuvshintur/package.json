@@ -1,0 +1,26 @@
+{
+  "name": "mwa-homework-08-mongodb-02-Tuvshintur",
+  "version": "1.0.0",
+  "description": "Considering the following [`restaurants`](http://mumstudents.org/cs572/lecture08/restaurants.zip) collection that has information about all restaurants in the USA. Import the data into a local/cloud DB server.\r ```javascript\r { \r \"address\": { \"building\": \"1007\", \r \t       \"coord\": [ -73.856077, 40.848447 ], \r \t       \"street\": \"Morris Park Ave\", \r \t       \"zipcode\": \"10462\" }, \r \"district\": \"Bronx\", \r \"cuisine\": \"Bakery\", \r     \"grades\": [ {\"date\": {\"$date\": 1393804800000}, \"grade\": \"A\", \"score\": 2},\r                 {\"date\": {\"$date\": 1378857600000}, \"grade\": \"A\", \"score\": 6}, \r                 {\"date\": {\"$date\": 1358985600000}, \"grade\": \"A\", \"score\": 10}, \r                 {\"date\": {\"$date\": 1322006400000}, \"grade\": \"A\", \"score\": 9}, \r                 {\"date\": {\"$date\": 1299715200000}, \"grade\": \"B\", \"score\": 14}], \r     \"name\": \"Morris Park Bake Shop\", \r     \"restaurant_id\": \"30075445\" \r }\r ```\r 1. Write a MongoDB query to display all the documents in the collection restaurants. \r 2. Write a MongoDB query to display the fields `restaurant_id`, `name`, `district` and `cuisine` for all the documents in the collection restaurant.\r 3. Write a MongoDB query to display the fields `restaurant_id`, `name`, `district` and `cuisine`, but exclude the field `_id` for all the documents in the collection restaurant. \r 4. Write a MongoDB query to display the fields `restaurant_id`, `name`, `district` and `zipcode`, but exclude the field `_id` for all the documents in the collection restaurant. \r 5. Write a MongoDB query to display all the restaurant which is in the `district` `\"Bronx\"`.\r 6. Write a MongoDB query to display the first 5 restaurant which is in the `district` `\"Bronx\"`. \r 7. Write a MongoDB query to display the next 5 restaurants after skipping first 5 which are in the `district` `\"Bronx\"`. \r 8. Write a MongoDB query to find the restaurants which locates in coord value less than `-95.754168`.\r 9. Write a MongoDB query to find the restaurants that does not prepare any `cuisine` of `\"American\"` and their grade `score` more than `70` and `coord` value less than `-65.754168`. \r 10. Write a MongoDB query to find the `restaurant_id`, `name`, `district` and `cuisine` for those restaurants which contains `'Wil'` as first three letters for its `name`. \r 11. Write a MongoDB query to find the `restaurant_id`, `name`, `district` and `cuisine` for those restaurants which contains `'ces'` as last three letters for its `name`.\r 12. Write a MongoDB query to find the `restaurant_id`, `name`, `district` and `cuisine` for those restaurants which contains `'Reg'` as three letters somewhere in its `name`. \r 13. Write a MongoDB query to find the restaurants which belongs to the `district` `\"Bronx\"` and prepared either `American` or `Chinese` dish.\r 14. Write a MongoDB query to find the `restaurant_id`, `name`, `district` and `cuisine` for those restaurants which belongs to the `district` `\"Staten Island\"` or `\"Queens\"` or `\"Bronx\"` or `\"Brooklyn\"`. \r 15. Write a MongoDB query to find the `restaurant_id`, `name`, `district` and `cuisine` for those restaurants which are not belonging to the `district` `\"Staten Island\"` or `\"Queens\"` or `\"Bronx\"` or `\"Brooklyn\"`. \r 16. Write a MongoDB query to find the `restaurant_id`, `name`, `district` and `cuisine` for those restaurants which achieved a `score` which is not more than `10`.\r 17. Write a MongoDB query to find the `restaurant_id`, `name`, `address` and geographical `coord` for those restaurants where 2nd element of `coord` array contains a value which is more than `42` and up to `52`. \r 18. Write a MongoDB query to arrange the `name` of the restaurants in ascending order along with all the columns. \r 19. Write a MongoDB query to arrange the `name` of the restaurants in descending order along with all the columns. \r 20. Write a MongoDB query to arrange the name of the `cuisine` in ascending order and for those same cuisine `district` should be in descending order.\r 21. Write a MongoDB query which will select all documents in the restaurants collection where the `coord` field value is `Double`.\r 22. Write a MongoDB query to find the restaurant `name`, `district`, `longitude` and `latitude` and `cuisine` for those restaurants which contains `'Mad'` as first three letters of its `name`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maharishi-university/mwa-homework-08-mongodb-02-Tuvshintur.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maharishi-university/mwa-homework-08-mongodb-02-Tuvshintur/issues"
+  },
+  "homepage": "https://github.com/maharishi-university/mwa-homework-08-mongodb-02-Tuvshintur#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.2",
+    "morgan": "^1.9.1"
+  }
+}

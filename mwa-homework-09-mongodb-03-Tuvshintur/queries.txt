@@ -1,0 +1,29 @@
+db.homework09.aggregate([{$match:{"state":"IA"}},{$project:{"zipcode":"$_id","_id":0}}])
+db.homework09.aggregate([{$match:{"pop":{$lt:10000}}},{$project:{"zipcode":"$_id","_id":0}}])
+db.homework09.aggregate([{
+    $group:{
+    _id:{"state":"$state","city":"$city"},
+    "n":{$sum:1}}},
+    {$match:{
+        "n":{"$gt":1}}},
+    {$sort:{
+        "_id.state":1,"_id.city":1}},
+    {$project:{
+        "state":"$_id.state","city":"$_id.city","N":"$n",_id:0}
+}])
+db.homework09.aggregate([
+    {$group:{
+        _id:{"state":"$state","city":"$city"},
+        "population":{$sum:"$pop"}
+    }},
+    {$sort:{
+        "_id.state":1,
+        "population":1
+    }},
+    {$group:{
+       _id:"$_id.state",
+       "city":{$first:"$_id.city"},
+       "population":{$first:"$population"}
+    }},
+    {$sort:{"_id":1}}
+])

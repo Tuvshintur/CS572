@@ -1,0 +1,15 @@
+ReadFileSync
+
+Start Date:  2020-01-15T21:28:05.815Z
+End Date:  2020-01-15T21:28:06.071Z
+
+ReadFile 
+
+Start Date:  2020-01-15T21:25:11.528Z
+End Date:  2020-01-15T21:25:12.073Z
+
+Stream
+Start Date:  2020-01-15T21:22:50.756Z
+End Date:  2020-01-15T21:22:50.760Z
+
+As above result of my observation, the stream is faster than other two in execution

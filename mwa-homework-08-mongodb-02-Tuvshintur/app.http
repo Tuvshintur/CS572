@@ -1,0 +1,11 @@
+GET http://localhost:3000/restaurants
+
+POST http://localhost:3000/
+Content-Type: application/json
+
+{
+    "name":"Imperial Buffet",
+    "category":"restaurants",
+    "lat":41.0127348,
+    "long":-91.9685251
+}

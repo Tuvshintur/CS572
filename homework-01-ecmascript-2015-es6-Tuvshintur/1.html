@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 1</title>
+    <script src="js/removeNum.js"></script>
+</head>
+<body> 
+    <pre>
+        
+    1. The code that following is working in background and printing result to the console.
+    2. In order to execute code when window on load, I used IIFE pattern. Also added function removeNum to the Array prototype which is
+        returns promise.
+        As I learned today, Promises are queued in Microtask Queue which is higher priority than Macrotask Queue and the JS engine executed
+        synchronous lines the event loop will put callback to the JS engine from Microtask queue.
+        
+        <b>JS code:</b>
+        (() => {   
+            Array.prototype.removeNum = function(num) {
+                let arr = this;
+                try {
+                    return new Promise((resolve, reject)=>{
+                        if(arr.includes(num)) {
+                            let tmp = arr.filter((val)=>{
+                                return val!==num;
+                            });
+                            resolve(tmp);
+                        } else {
+                            reject('array doesnt contain value of number');
+                        }
+                    });
+                } catch(e) {
+                    console.log(e);
+                }
+            };
+        
+        
+            console.log('Start'); 
+            [1, 3, 4, 2, 1, 5].removeNum(1).then(console.log).catch(console.log);
+            console.log('Finish');
+        
+        })();
+
+        <b>Result:</b>
+            Start
+            Finish
+            [3, 4, 2, 5]
+    </pre>
+
+</body>
+</html>

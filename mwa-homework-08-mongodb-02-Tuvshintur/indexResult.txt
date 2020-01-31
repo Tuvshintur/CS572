@@ -1,0 +1,10 @@
+In order to improve user
+
+db.collection('books').createIndex('isbn': 1)
+db.collection('books').createIndex('bookId': 1)
+db.collection('books').createIndex('author': 1)
+
+
+db.collection('students').createIndex('studentName');
+db.collection('students').createIndex('studentid');
+db.collection('students').createIndex('borrowedBooks.returnDate');

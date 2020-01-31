@@ -1,0 +1,25 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "Create an Express application that will accept a `GET` request from route `/users` and send a `JSON` response with users data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maharishi-university/mwa-homework05-expressjs-01-Tuvshintur.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maharishi-university/mwa-homework05-expressjs-01-Tuvshintur/issues"
+  },
+  "homepage": "https://github.com/maharishi-university/mwa-homework05-expressjs-01-Tuvshintur#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "rxjs": "^6.5.4",
+    "superagent": "^5.2.1"
+  }
+}

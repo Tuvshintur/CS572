@@ -1,0 +1,21 @@
+GET http://localhost:3000/students
+
+GET http://localhost:3000/students/1
+
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "id": 2,
+    "name": "studfent",
+    "course": "CS572",
+    "picture": "{{$timestamp}}.jpg",
+    "grade": 100
+}
+
+DELETE http://localhost:3000/students/1
+
+POST  http://localhost:3000/students
+Content-Type: plain/text
+
+asdgdkfjhjgjkdjfksjfksjdfkasjfksdjak

@@ -1,0 +1,20 @@
+GET http://localhost:3000/
+
+POST http://localhost:3000/5e2b003c77c22535fe4530f4/reserve
+Content-Type: application/json
+
+{
+    "name": "newDriver",
+    "driving_license": "AL2019B6"
+}
+
+PATCH http://localhost:3000/5e2b003c77c22535fe4530f4/reserve/5e2b0173896b4916a4997a0b
+Content-Type: application/json
+
+{
+    "end_mileage" : 16000,
+    "number_of_days" : 3
+}
+
+DELETE  http://localhost:3000/5e2b003c77c22535fe4530f4/reserve/5e2b045fc84ff906ac5c543b
+Content-Type: application/json

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 1</title>
+</head>
+
+<body>
+    <button id="fetch">Fetch</button>
+    <button id="async">Async/Await</button>
+    <button id="observable">Observable</button>
+
+    <pre>
+    1. Created Fetch, Async/Await, Observable buttons and fetch response then print to the console.
+    2. Barely can say that all of three are asynchronous. I'm choosing Async and Await to explain. 
+        Async and Await is the shortest and simplest way to coding of asynchronous implementation.
+        Async function that describes these block of code will work asynchronously by event loop and
+        returns promise. Await is works as then().
+
+        document.getElementById("fetch").onclick = function () {
+            fetch("https://randomuser.me/api/")
+                .then(response => {
+                    return response.json();
+                })
+                .then(json => {
+                    console.log(json.results[0].name);
+                    console.log(json.results[0].location);
+                });
+        };
+        
+        document.getElementById("async").onclick = function () {
+            async function asyncCall() {
+                const response = await getUser();
+                let json = await response.json()
+                console.log(json.results[0].name);
+                console.log(json.results[0].location);
+            }
+            asyncCall();
+        };
+        
+        function getUser() {
+            return fetch("https://randomuser.me/api/")
+        }
+        
+        const { Observable } = rxjs;
+        const { map, filter } = rxjs.operators;
+        
+        document.getElementById("observable").onclick = function () {
+            const observable = Observable.create((ob) => {
+                fetch("https://randomuser.me/api/")
+                    .then(response => response.json())
+                    .then(data => {
+                        ob.next(data);
+                        ob.complete();
+                    })
+            });
+        
+            observable.subscribe(
+                res => {    
+                    console.log(res.results[0].name);
+                    console.log(res.results[0].location);
+                },
+                err => console.log(err)
+            );
+        };
+
+    </pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.3/rxjs.umd.js"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>
